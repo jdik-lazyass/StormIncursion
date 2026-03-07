@@ -1,0 +1,53 @@
+{
+    "name": "RoR2.Editor.Scripts",
+    "rootNamespace": "",
+    "references": [
+        "GUID:60983344ee8157d4ab97c25513f789c4",
+        "GUID:a44f47cf3ada4435dbc516bad0bc86fe",
+        "GUID:478a2357cc57436488a56e564b08d223",
+        "GUID:9e24947de15b9834991c9d8411ea37cf",
+        "GUID:84651a3751eca9349aac36a66bba901b"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "RoR2.dll",
+        "HGCSharpUtils.dll",
+        "HGUnityUtils.dll",
+        "Assembly-CSharp.dll",
+        "Decalicious.dll",
+        "KinematicCharacterController.dll",
+        "LegacyResourcesAPI.dll",
+        "SimpleJSON.dll",
+        "Unity.Addressables.dll",
+        "Unity.ResourceManager.dll",
+        "com.unity.multiplayer-hlapi.Runtime.dll",
+        "R2API.Addressables.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "R2EK_ROR2_IMPORTED"
+    ],
+    "versionDefines": [
+        {
+            "name": "riskofrain2",
+            "expression": "0.0.1",
+            "define": "R2EK_ROR2_IMPORTED"
+        },
+        {
+            "name": "com.unity.addressables",
+            "expression": "0.0.1",
+            "define": "R2EK_ADDRESSABLES"
+        },
+        {
+            "name": "riskofthunder-r2api_addressables",
+            "expression": "0.0.1",
+            "define": "R2EK_R2API_ADDRESSABLES"
+        }
+    ],
+    "noEngineReferences": false
+}
