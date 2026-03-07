@@ -157,6 +157,8 @@ _NCrunch_*
 .*crunch*.local.xml
 nCrunchTemp_*
 
+ArtifactDB.*
+
 # MightyMoose
 *.mm.*
 AutoTest.Net/
