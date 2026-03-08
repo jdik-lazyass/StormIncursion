@@ -74,7 +74,8 @@ artifacts/
 StyleCopReport.xml
 
 # specific folders
-ROR2MOD/Library/
+StormIncursion_Unity/Library/
+StormIncursion_Unity/Packages/*/
 
 # Files built by Visual Studio
 *_i.c
@@ -103,6 +104,8 @@ ROR2MOD/Library/
 *.pidb
 *.svclog
 *.scc
+*.sln
+*.csproj
 
 # Chutzpah Test files
 _Chutzpah*
