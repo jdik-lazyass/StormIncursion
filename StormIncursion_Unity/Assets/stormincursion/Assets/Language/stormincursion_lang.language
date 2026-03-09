@@ -1,0 +1,23 @@
+
+{
+    "strings": {
+        "CATACLYSMIC_JAWBREAKER_NAME": "Cataclysmic Jawbreaker",
+        "CATACLYSMIC_JAWBREAKER_PICKUP": "Increase critical strike chance and critical strike damage. Recieving damage disables all healing for a time...",
+        "CATACLYSMIC_JAWBREAKER_DESC": "Increase critical strike chance by 37.5% (+37.5% per stack), and critical strike damage by 37.5% (+37.5% per stack). Recieving damage stops all healing for 0.5 seconds (+0.5 seconds per stack).",
+        "CATACLYSMIC_JAWBREAKER_LORE": "...",
+
+        "KEYCHAIN_NAME": "Keychain",
+        "KEYCHAIN_PICKUP": "Grants temporary luck on unlucky shots.",
+        "KEYCHAIN_DESC": "Chance on hit to give luck buff that stacks up to 15 times.",
+        "KEYCHAIN_LORE": "<style=cEvent>//--TRANSCRIPT FROM ROOM 8395 OF UES [Redacted]--//</style>" +
+            "\r\n\n\"God, take this crap away already, how can noisy bunch of keys bring you faith?\"" +
+            "\r\n\nLiam shouts at Elijah, packing up his own items into a cardboard box and preparing them for transfer." +
+            "\r\n\nAnother day at Contact Light's most unpaid jobs, both Liam and Elijah being manual transferers, brings them closer to light form of depression." +
+            "\r\n\n\"The only thing that's left from my home, to be exact. It was... evaporated, if in short.\"" +
+            "\r\n\nLiam leaves room with hollow mind." +
+            "\r\n\nElijah's mind sparked a bit when he understood that only after 3 years of cooperative work, Liam noticed his keychain." +
+            "\r\n\n\"I bet you have some meaning relic with yourself. I believe all people have one.\"" +
+            "\r\n\nElijah closes up their room after they both leave it. No further audio detected." +
+            "\r\n\n<style=cEvent>//--END TRANSCRIPT--//</style>"
+    }
+}

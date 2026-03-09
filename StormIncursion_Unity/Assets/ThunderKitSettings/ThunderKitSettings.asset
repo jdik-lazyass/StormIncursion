@@ -27,8 +27,8 @@ MonoBehaviour:
   CachedImageCount: 0
   CacheSize: 0
   MarkdownOpenMode: 1
-  SelectedPipeline: {fileID: 0}
+  SelectedPipeline: {fileID: 11400000, guid: 8bd52196421a46649be1c00ccf7545ba, type: 2}
   SelectedManifest: {fileID: 0}
   QuickAccessPipelines: []
   QuickAccessManifests: []
-  ImportConfiguration: {fileID: 11400000, guid: ba21a4a5f83ced3428f6bd1ee9010a2f, type: 2}
+  ImportConfiguration: {fileID: 11400000, guid: 896bfeb85a22b4d4687517eee67bd585, type: 2}

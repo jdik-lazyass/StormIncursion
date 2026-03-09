@@ -1,11 +1,11 @@
 {
-    "originalSdkFolder": "D:\\Wwise2019.2.15.7667\\SDK",
+    "originalSdkFolder": "D:\\Wwise2023.1.19.8928\\SDK",
     "currentVersion": {
         "nickname": "",
-        "build": 2215,
-        "major": 2,
-        "minor": 15,
-        "year": 2019
+        "build": 3861,
+        "major": 1,
+        "minor": 19,
+        "year": 2023
     },
     "installedBundleGroups": [
         {

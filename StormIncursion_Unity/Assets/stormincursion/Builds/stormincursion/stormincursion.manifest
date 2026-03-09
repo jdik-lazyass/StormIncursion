@@ -1,0 +1,7 @@
+ManifestFileVersion: 0
+CRC: 162556904
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: stormincursionassets
+      Dependencies: {}

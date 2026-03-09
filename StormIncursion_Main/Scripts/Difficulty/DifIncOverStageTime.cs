@@ -47,12 +47,15 @@ namespace JDContent.Scripts.Difficulty
 
                 if (minuteCount % 4 == 0)
                 {
-                    TimesBuffed += 1;
-                    Chat.SendBroadcastChat(new Chat.SimpleChatMessage
+                    if (Run.instance.selectedDifficulty == JDContent.Scripts.Difficulty.StormIncursion.ModDifIndex)
                     {
-                        baseToken = "{0}",
-                        paramTokens = new[] { "<style=cDeath>The storm blusters...</style>" }
-                    });
+                        TimesBuffed += 1;
+                        Chat.SendBroadcastChat(new Chat.SimpleChatMessage
+                        {
+                            baseToken = "{0}",
+                            paramTokens = new[] { "<style=cDeath>The storm blusters...</style>" }
+                        });
+                    }
                 }
             }
         }

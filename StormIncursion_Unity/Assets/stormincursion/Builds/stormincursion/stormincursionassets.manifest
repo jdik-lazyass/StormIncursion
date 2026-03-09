@@ -1,0 +1,43 @@
+ManifestFileVersion: 0
+CRC: 481484845
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 05c0d559d4e6c6de88d1435606f498e5
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: e08bc4798181ecb7a992aeff90bc9dcc
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 802575700, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: -1284244208, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers:
+- AssemblyName: Unity.Addressables
+  ClassName: UnityEngine.AddressableAssets.AssetReferenceT`1[UnityEngine.GameObject]
+Assets:
+- Assets/stormincursion/Assets/Items/Models/Template.fbx
+- Assets/stormincursion/Assets/StormIncursion_Expansion.asset
+- Assets/stormincursion/Assets/Items/Prefabs/My Item.asset
+Dependencies: []

@@ -1,0 +1,10 @@
+{
+    "name": "stormincursion",
+    "author": "jdikwhat",
+    "version_number": "0.0.1",
+    "website_url": "https://github.com/jdik-lazyass/StormIncursion",
+    "description": "Epic content",
+    "dependencies": [
+        "bbepis-BepInExPack-5.4.2121"
+    ]
+}
