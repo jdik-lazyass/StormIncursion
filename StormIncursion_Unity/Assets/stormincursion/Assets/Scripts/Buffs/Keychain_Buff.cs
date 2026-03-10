@@ -21,9 +21,12 @@ namespace stormincursion
             if (sender.HasBuff(BuffDef))
             {
                 int count = sender.GetBuffCount(BuffDef);
+
+                int stacks = sender.inventory.GetItemCountEffective(Keychain_Item.ItemDef);
+
                 if (count * LuckInc * 8f >= 1)
                     args.luckAdd += 1f;
-                args.critAdd += count * 1.15f;
+                args.critAdd += count * (1.15f + (1 - stacks));
             }
         }
     }

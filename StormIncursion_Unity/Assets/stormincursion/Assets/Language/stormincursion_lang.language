@@ -2,22 +2,48 @@
 {
     "strings": {
         "CATACLYSMIC_JAWBREAKER_NAME": "Cataclysmic Jawbreaker",
-        "CATACLYSMIC_JAWBREAKER_PICKUP": "Increase critical strike chance and critical strike damage. Recieving damage disables all healing for a time...",
-        "CATACLYSMIC_JAWBREAKER_DESC": "Increase critical strike chance by 37.5% (+37.5% per stack), and critical strike damage by 37.5% (+37.5% per stack). Recieving damage stops all healing for 0.5 seconds (+0.5 seconds per stack).",
-        "CATACLYSMIC_JAWBREAKER_LORE": "...",
+        "CATACLYSMIC_JAWBREAKER_PICKUP": "Increase critical strike chance and critical strike damage. <style=cIsHealth>Recieving damage disables all healing for a time...</style>",
+        "CATACLYSMIC_JAWBREAKER_DESC": "Increase <style=cIsDamage>critical strike chance by 37.5%</style> <style=cStack>(+37.5% per stack)</style>, and <style=cIsDamage>critical strike damage by 37.5%</style> <style=cStack>(+37.5% per stack)</style>. Recieving damage <style=cIsHealth>stops all healing for 0.5 seconds</style> <style=cStack>(+0.5 seconds per stack)</style>.",
+        "CATACLYSMIC_JAWBREAKER_LORE": "<style=cEvent>//--TRANSCRIPT FROM UNIDENTIFIED ARTIFACT STORAGE--//</style>" 
+            "\r\n\n\"MY TEETH BLEED.\"" 
+            "\r\n\n\"BLEED WITH MORE CALCIUM.\"" 
+            "\r\n\n\"GRANTING MORE PAIN AND TEETH.\"" 
+            "\r\n\n<style=cEvent>//--END TRANSCRIPT--//</style>",
 
         "KEYCHAIN_NAME": "Keychain",
-        "KEYCHAIN_PICKUP": "Grants temporary luck on unlucky shots.",
-        "KEYCHAIN_DESC": "Chance on hit to give luck buff that stacks up to 15 times.",
-        "KEYCHAIN_LORE": "<style=cEvent>//--TRANSCRIPT FROM ROOM 8395 OF UES [Redacted]--//</style>" +
-            "\r\n\n\"God, take this crap away already, how can noisy bunch of keys bring you faith?\"" +
-            "\r\n\nLiam shouts at Elijah, packing up his own items into a cardboard box and preparing them for transfer." +
-            "\r\n\nAnother day at Contact Light's most unpaid jobs, both Liam and Elijah being manual transferers, brings them closer to light form of depression." +
-            "\r\n\n\"The only thing that's left from my home, to be exact. It was... evaporated, if in short.\"" +
-            "\r\n\nLiam leaves room with hollow mind." +
-            "\r\n\nElijah's mind sparked a bit when he understood that only after 3 years of cooperative work, Liam noticed his keychain." +
-            "\r\n\n\"I bet you have some meaning relic with yourself. I believe all people have one.\"" +
-            "\r\n\nElijah closes up their room after they both leave it. No further audio detected." +
+        "KEYCHAIN_PICKUP": "Chance on hit to give luck buff that stacks up to 15 times.",
+        "KEYCHAIN_DESC": "Whenever you make a <style=cIsDamage>gold purchase</style> you will recieve a luck buff. Each buff stack grants <style=cIsDamage>critical strike chance</style> <style=cStack>(increases per stack)</style>. At 13 or more stacks all random effects <style=cIsUtility>are rolled +1 times for a favorable outcome</style>. Buff stacks reset upon <style=cIsDamage>reaching 15</style>.",
+        "KEYCHAIN_LORE": "<style=cEvent>//--TRANSCRIPT FROM ROOM 8395 OF UES [Redacted]--//</style>" 
+            "\r\n\n\"God, get rid of this crap already, how much longer are you going to carry this noisy bunch of keys around?\"" 
+            "\r\n\nLiam shouts at Elijah while packing up his belongings in a cardboard box, preparing them for transfer." 
+            "\r\n\n\"It's the only thing I have left of what used to be my own house. It got... evaporated, I don't want to go into details right now.\"" 
+            "\r\n\nLiam leaves the room in complete silence." 
+            "\r\n\nThe expression on Elijah's face suddenly changed. After 3 years of exhausting work with Liam at one of the most underpaid jobs Contact Light has to offer, this was the first time he asked about the keychain that clearly meant a lot to Elijah." 
+            "\r\n\n\"Don't you have something that reminds you of your home too?\"" 
+            "\r\n\nElijah walks out of the room, turns the lights off and shuts the door. No further audio detected." 
+            "\r\n\n<style=cEvent>//--END TRANSCRIPT--//</style>"
+    }
+    "ru": {
+        "CATACLYSMIC_JAWBREAKER_NAME": "Катаклизмическая Зубодробилка",
+        "CATACLYSMIC_JAWBREAKER_PICKUP": "Increase critical strike chance and critical strike damage. <style=cIsHealth>Recieving damage disables all healing for a time...</style>",
+        "CATACLYSMIC_JAWBREAKER_DESC": "Increase <style=cIsDamage>critical strike chance by 37.5%</style> <style=cStack>(+37.5% per stack)</style>, and <style=cIsDamage>critical strike damage by 37.5%</style> <style=cStack>(+37.5% per stack)</style>. Recieving damage <style=cIsHealth>stops all healing for 0.5 seconds</style> <style=cStack>(+0.5 seconds per stack)</style>.",
+        "CATACLYSMIC_JAWBREAKER_LORE": "<style=cEvent>//--TRANSCRIPT FROM UNIDENTIFIED ARTIFACT STORAGE--//</style>" 
+            "\r\n\n\"MY TEETH BLEED.\"" 
+            "\r\n\n\"BLEED WITH MORE CALCIUM.\"" 
+            "\r\n\n\"GRANTING MORE PAIN AND TEETH.\"" 
+            "\r\n\n<style=cEvent>//--END TRANSCRIPT--//</style>",
+
+        "KEYCHAIN_NAME": "Связка ключей",
+        "KEYCHAIN_PICKUP": "Chance on hit to give luck buff that stacks up to 15 times.",
+        "KEYCHAIN_DESC": "Chance on hit to give luck buff <style=cStack>(chance increases per stack)</style> that stacks up to <style=cIsDamage>15 times</style> and grants <style=cIsUtility>+1 luck</style> on <style=cIsDamage>13 or more stacks</style>. Each buff stack grants a <style=cIsDamage>critical strike chance</style>. Buff stacks reset upon <style=cIsDamage>reaching 15</style>.",
+        "KEYCHAIN_LORE": "<style=cEvent>//--TRANSCRIPT FROM ROOM 8395 OF UES [Redacted]--//</style>" 
+            "\r\n\n\"God, get rid of this crap already, how much longer are you going to carry this noisy bunch of keys around?\"" 
+            "\r\n\nLiam shouts at Elijah while packing up his belongings in a cardboard box, preparing them for transfer." 
+            "\r\n\n\"It's the only thing I have left of what used to be my own house. It got... evaporated, I don't want to go into details right now.\"" 
+            "\r\n\nLiam leaves the room in complete silence." 
+            "\r\n\nThe expression on Elijah's face suddenly changed. After 3 years of exhausting work with Liam at one of the most underpaid jobs Contact Light has to offer, this was the first time he asked about the keychain that clearly meant a lot to Elijah." 
+            "\r\n\n\"Don't you have something that reminds you of your home too?\"" 
+            "\r\n\nElijah walks out of the room, turns the lights off and shuts the door. No further audio detected." 
             "\r\n\n<style=cEvent>//--END TRANSCRIPT--//</style>"
     }
 }

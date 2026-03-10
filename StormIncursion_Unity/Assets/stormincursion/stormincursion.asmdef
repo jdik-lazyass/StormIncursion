@@ -29,7 +29,8 @@
         "MonoMod.Utils.dll",
         "Mono.Cecil.Pdb.dll",
         "R2API.RecalculateStats.dll",
-        "R2API.Language.dll"
+        "R2API.Language.dll",
+        "R2API.Items.dll"
     ],
     "autoReferenced": true,
     "defineConstraints": [],
