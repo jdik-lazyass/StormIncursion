@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -1284244208, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
-  m_Name: CataclysmicJawbreaker
+  m_Name: IcecreamEclipse
   m_EditorClassIdentifier: 
-  deprecatedTier: 3
+  deprecatedTier: 2
   _itemTierDef: {fileID: 0}
-  nameToken: CATACLYSMIC_JAWBREAKER_NAME
-  pickupToken: CATACLYSMIC_JAWBREAKER_PICKUP
-  descriptionToken: CATACLYSMIC_JAWBREAKER_DESC
-  loreToken: CATACLYSMIC_JAWBREAKER_LORE
+  nameToken: ICECREAM_NAME
+  pickupToken: ICECREAM_PICKUP
+  descriptionToken: ICECREAM_DESC
+  loreToken: ICECREAM_LORE
   unlockableDef: {fileID: 0}
   pickupModelPrefab: {fileID: 919132149155446097, guid: bee4e19e1ef32a047aa743894ab21244, type: 3}
   pickupModelReference:

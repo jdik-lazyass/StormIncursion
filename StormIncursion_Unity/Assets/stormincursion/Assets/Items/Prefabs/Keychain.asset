@@ -19,7 +19,7 @@ MonoBehaviour:
   descriptionToken: KEYCHAIN_DESC
   loreToken: KEYCHAIN_LORE
   unlockableDef: {fileID: 0}
-  pickupModelPrefab: {fileID: 919132149155446097, guid: e60840b2a3922064498c3ebc9d86ecd2, type: 3}
+  pickupModelPrefab: {fileID: 3726229884580363921, guid: 72217487510bb014d8655516f4bba882, type: 3}
   pickupModelReference:
     m_AssetGUID: 
     m_SubObjectName: 

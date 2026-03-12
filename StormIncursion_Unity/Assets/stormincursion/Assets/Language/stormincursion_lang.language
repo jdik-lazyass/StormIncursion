@@ -1,17 +1,8 @@
 
 {
     "strings": {
-        "CATACLYSMIC_JAWBREAKER_NAME": "Cataclysmic Jawbreaker",
-        "CATACLYSMIC_JAWBREAKER_PICKUP": "Increase critical strike chance and critical strike damage. <style=cIsHealth>Recieving damage disables all healing for a time...</style>",
-        "CATACLYSMIC_JAWBREAKER_DESC": "Increase <style=cIsDamage>critical strike chance by 37.5%</style> <style=cStack>(+37.5% per stack)</style>, and <style=cIsDamage>critical strike damage by 37.5%</style> <style=cStack>(+37.5% per stack)</style>. Recieving damage <style=cIsHealth>stops all healing for 0.5 seconds</style> <style=cStack>(+0.5 seconds per stack)</style>.",
-        "CATACLYSMIC_JAWBREAKER_LORE": "<style=cEvent>//--TRANSCRIPT FROM UNIDENTIFIED ARTIFACT STORAGE--//</style>" 
-            "\r\n\n\"MY TEETH BLEED.\"" 
-            "\r\n\n\"BLEED WITH MORE CALCIUM.\"" 
-            "\r\n\n\"GRANTING MORE PAIN AND TEETH.\"" 
-            "\r\n\n<style=cEvent>//--END TRANSCRIPT--//</style>",
-
         "KEYCHAIN_NAME": "Keychain",
-        "KEYCHAIN_PICKUP": "Chance on hit to give luck buff that stacks up to 15 times.",
+        "KEYCHAIN_PICKUP": "Making purchases gives luck buff that stacks up to 15 times.",
         "KEYCHAIN_DESC": "Whenever you make a <style=cIsDamage>gold purchase</style> you will recieve a luck buff. Each buff stack grants <style=cIsDamage>critical strike chance</style> <style=cStack>(increases per stack)</style>. At 13 or more stacks all random effects <style=cIsUtility>are rolled +1 times for a favorable outcome</style>. Buff stacks reset upon <style=cIsDamage>reaching 15</style>.",
         "KEYCHAIN_LORE": "<style=cEvent>//--TRANSCRIPT FROM ROOM 8395 OF UES [Redacted]--//</style>" 
             "\r\n\n\"God, get rid of this crap already, how much longer are you going to carry this noisy bunch of keys around?\"" 
@@ -22,17 +13,12 @@
             "\r\n\n\"Don't you have something that reminds you of your home too?\"" 
             "\r\n\nElijah walks out of the room, turns the lights off and shuts the door. No further audio detected." 
             "\r\n\n<style=cEvent>//--END TRANSCRIPT--//</style>"
+
+        "ICECREAM_NAME": "Eclipse Subzero",
+        "ICECREAM_PICKUP": "Stunning already stunned enemy freezes.",
+        "ICECREAM_DESC": "<style=cIsUtility>Stunning</style> already <style=cIsUtility>stunned</style> enemy <style=cIsUtility>freezes</style> them for 2 <style=cStack>(+0.25 per stack)</style> times the duration of previously applied stun. Has an <style=cIsUtility>8 second</style> cooldown.",
     }
     "ru": {
-        "CATACLYSMIC_JAWBREAKER_NAME": "Катаклизмическая Зубодробилка",
-        "CATACLYSMIC_JAWBREAKER_PICKUP": "Increase critical strike chance and critical strike damage. <style=cIsHealth>Recieving damage disables all healing for a time...</style>",
-        "CATACLYSMIC_JAWBREAKER_DESC": "Increase <style=cIsDamage>critical strike chance by 37.5%</style> <style=cStack>(+37.5% per stack)</style>, and <style=cIsDamage>critical strike damage by 37.5%</style> <style=cStack>(+37.5% per stack)</style>. Recieving damage <style=cIsHealth>stops all healing for 0.5 seconds</style> <style=cStack>(+0.5 seconds per stack)</style>.",
-        "CATACLYSMIC_JAWBREAKER_LORE": "<style=cEvent>//--TRANSCRIPT FROM UNIDENTIFIED ARTIFACT STORAGE--//</style>" 
-            "\r\n\n\"MY TEETH BLEED.\"" 
-            "\r\n\n\"BLEED WITH MORE CALCIUM.\"" 
-            "\r\n\n\"GRANTING MORE PAIN AND TEETH.\"" 
-            "\r\n\n<style=cEvent>//--END TRANSCRIPT--//</style>",
-
         "KEYCHAIN_NAME": "Связка ключей",
         "KEYCHAIN_PICKUP": "Chance on hit to give luck buff that stacks up to 15 times.",
         "KEYCHAIN_DESC": "Chance on hit to give luck buff <style=cStack>(chance increases per stack)</style> that stacks up to <style=cIsDamage>15 times</style> and grants <style=cIsUtility>+1 luck</style> on <style=cIsDamage>13 or more stacks</style>. Each buff stack grants a <style=cIsDamage>critical strike chance</style>. Buff stacks reset upon <style=cIsDamage>reaching 15</style>.",
