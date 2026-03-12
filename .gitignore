@@ -106,7 +106,6 @@ StormIncursion_Unity/Packages/*/
 *.scc
 *.sln
 *.csproj
-*.fbx
 
 # Chutzpah Test files
 _Chutzpah*
@@ -315,6 +314,8 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+*.sln
+*.asset
 
 # CodeRush
 .cr/
