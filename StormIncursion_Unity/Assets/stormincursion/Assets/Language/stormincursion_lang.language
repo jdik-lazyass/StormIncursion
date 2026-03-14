@@ -12,7 +12,7 @@
             "\r\n\nThe expression on Elijah's face suddenly changed. After 3 years of exhausting work with Liam at one of the most underpaid jobs Contact Light has to offer, this was the first time he asked about the keychain that clearly meant a lot to Elijah." 
             "\r\n\n\"Don't you have something that reminds you of your home too?\"" 
             "\r\n\nElijah walks out of the room, turns the lights off and shuts the door. No further audio detected." 
-            "\r\n\n<style=cEvent>//--END TRANSCRIPT--//</style>"
+            "\r\n\n<style=cEvent>//--END TRANSCRIPT--//</style>",
 
         "ICECREAM_NAME": "Eclipse Subzero",
         "ICECREAM_PICKUP": "Stunning already stunned enemy freezes.",
@@ -30,6 +30,10 @@
             "\r\n\nThe expression on Elijah's face suddenly changed. After 3 years of exhausting work with Liam at one of the most underpaid jobs Contact Light has to offer, this was the first time he asked about the keychain that clearly meant a lot to Elijah." 
             "\r\n\n\"Don't you have something that reminds you of your home too?\"" 
             "\r\n\nElijah walks out of the room, turns the lights off and shuts the door. No further audio detected." 
-            "\r\n\n<style=cEvent>//--END TRANSCRIPT--//</style>"
+            "\r\n\n<style=cEvent>//--END TRANSCRIPT--//</style>",
+
+        "ICECREAM_NAME": "Эскимо «Затмение»",
+        "ICECREAM_PICKUP": "Stunning already stunned enemy freezes.",
+        "ICECREAM_DESC": "<style=cIsUtility>Stunning</style> already <style=cIsUtility>stunned</style> enemy <style=cIsUtility>freezes</style> them for 2 <style=cStack>(+0.25 per stack)</style> times the duration of previously applied stun. Has an <style=cIsUtility>8 second</style> cooldown.",
     }
 }
