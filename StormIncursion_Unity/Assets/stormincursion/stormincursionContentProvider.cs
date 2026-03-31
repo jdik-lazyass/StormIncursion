@@ -43,7 +43,8 @@ namespace stormincursion
             Keychain_Item.Init(_myBundle.LoadAsset<ItemDef>("Keychain"), stormincursionMain.instance.Config, _myBundle.LoadAsset<GameObject>("KeyChainDisplay"));
             KeychainInvis_Item.Init(_myBundle.LoadAsset<ItemDef>("Keychain_InvisTracker"), stormincursionMain.instance.Config, null);
             IceCream_Item.Init(_myBundle.LoadAsset<ItemDef>("IcecreamEclipse"), stormincursionMain.instance.Config, _myBundle.LoadAsset<GameObject>("IceCreamDisplay"));
-            stormincursionContentPack.itemDefs.Add(new ItemDef[] { Keychain_Item.ItemDef, KeychainInvis_Item.ItemDef, IceCream_Item.ItemDef});
+            SapphireRing_Item.Init(_myBundle.LoadAsset<ItemDef>("SapphireRing"), stormincursionMain.instance.Config, _myBundle.LoadAsset<GameObject>("SapphireRingDisplay"));
+            stormincursionContentPack.itemDefs.Add(new ItemDef[] { Keychain_Item.ItemDef, KeychainInvis_Item.ItemDef, IceCream_Item.ItemDef, SapphireRing_Item.ItemDef});
 
 
             // language

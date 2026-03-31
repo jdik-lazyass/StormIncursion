@@ -20,7 +20,7 @@ namespace stormincursion
             DisplayPrefab = displayPrefab;
 
             FreezeTime = config.Bind<float>("Item: IceCream", "Freeze Mod", 2f, "");
-            CooldownTime = config.Bind<float>("Item: IceCream", "Cooldown Time", 8f, "");
+            CooldownTime = config.Bind<float>("Item: IceCream", "Cooldown Time", 6f, "");
             FreezeTimePerStack = config.Bind<float>("Item: IceCream", "Freeze Time Per Stack", 0.25f, "");
 
             SetupDisplayRules();
