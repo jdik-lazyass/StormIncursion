@@ -21,6 +21,10 @@
         "SAPPHIRERING_NAME": "Sapphire Ring",
         "SAPPHIRERING_PICKUP": "When shield regeneration begins, emit a healing explosion.",
         "SAPPHIRERING_DESC": "When shield regeneration starts, emits a <style=cIsDamage>20m explosion</style> that heals <style=cIsHealing>1% of max health and shields </style><style=cStack>(+0.1 multiplier per stack)</style> for each enemy hit, and an additional <style=cIsHealing>2% of max health</style>. Grants <style=cIsHealing>4% shields</style> on first pickup.",
+
+        "WALLET_NAME": "Memorable Wallet",
+        "WALLET_PICKUP": "Saves money from purchases and gives it on the start of next stage.",
+        "WALLET_DESC": "Whenever you make a gold purchase, stores <style=cIsDamage>25%</style> <style=cStack>(+ 25% per stack, hyperbolic)</style> of spent gold. Upon entering next stage, gain all the stored gold back. Removes half of stored gold stacks upon entering next stage.",
     }
     "ru": {
         "KEYCHAIN_NAME": "Связка ключей",

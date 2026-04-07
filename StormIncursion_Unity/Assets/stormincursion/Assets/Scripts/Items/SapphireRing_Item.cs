@@ -19,7 +19,7 @@ namespace stormincursion
             ItemDef = itemDef;
             DisplayPrefab = displayPrefab;
 
-            HealMod = config.Bind<float>("Item: Keychain", "Luck Inc", 0.1f, "");
+            HealMod = config.Bind<float>("Item: Sapphire Ring", "Heal mod Inc", 0.1f, "");
 
             SetupDisplayRules();
             Hooks();
@@ -35,10 +35,10 @@ namespace stormincursion
                 {
                     ruleType = ItemDisplayRuleType.ParentedPrefab,
                     followerPrefab = DisplayPrefab,
-                    childName = "Pelvis",
-                    localPos = new Vector3(0.14396F, -0.03933F, -0.19248F),
-                    localAngles = new Vector3(330.3721F, 324.9917F, 176.7163F),
-                    localScale = new Vector3(0.15083F, 0.14789F, 0.1384F)
+                    childName = "Finger22R",
+                    localPos = new Vector3(0.02988F, -0.02095F, -0.01344F),
+                    localAngles = new Vector3(337.977F, 215.9772F, 344.9543F),
+                    localScale = new Vector3(0.05F, 0.05F, 0.05F)
                 }
             });
 
@@ -48,10 +48,10 @@ namespace stormincursion
                 {
                     ruleType = ItemDisplayRuleType.ParentedPrefab,
                     followerPrefab = DisplayPrefab,
-                    childName = "Pelvis",
-                    localPos = new Vector3(0.15941F, -0.0324F, 0.01423F),
-                    localAngles = new Vector3(45.73383F, 121.9203F, 203.6731F),
-                    localScale = new Vector3(0.1F, 0.1F, 0.1F)
+                    childName = "Finger22R",
+                    localPos = new Vector3(-0.00029F, 0.0307F, -0.00317F),
+                    localAngles = new Vector3(2.29923F, 336.0044F, 162.7472F),
+                    localScale = new Vector3(0.08F, 0.08F, 0.08F)
                 }
             });
 
@@ -61,11 +61,10 @@ namespace stormincursion
                 {
                     ruleType = ItemDisplayRuleType.ParentedPrefab,
                     followerPrefab = DisplayPrefab,
-                    childName = "Pelvis",
-                    localPos = new Vector3(0.15175F, 0.04859F, -0.12149F),
-                    localAngles = new Vector3(24.66067F, 156.4204F, 184.2085F),
-                    localScale = new Vector3(0.1F, 0.1F, 0.1F)
-
+                    childName = "Finger22R",
+                    localPos = new Vector3(-0.02323F, -0.03904F, 0.04649F),
+                    localAngles = new Vector3(18.72854F, 29.37996F, 210.6245F),
+                    localScale = new Vector3(0.05F, 0.05F, 0.05F)
                 }
             });
 
@@ -75,9 +74,9 @@ namespace stormincursion
                 {
                     ruleType = ItemDisplayRuleType.ParentedPrefab,
                     followerPrefab = DisplayPrefab,
-                    childName = "Hip",
-                    localPos = new Vector3(1.14234F, 2.97885F, 0.99265F),
-                    localAngles = new Vector3(12.52436F, 181.5724F, 184.6927F),
+                    childName = "Finger21R",
+                    localPos = new Vector3(0.48847F, 1.10847F, 0.69358F),
+                    localAngles = new Vector3(6.69701F, 172.1418F, 231.2393F),
                     localScale = new Vector3(1F, 1F, 1F)
                 }
             });
@@ -88,9 +87,9 @@ namespace stormincursion
                 {
                     ruleType = ItemDisplayRuleType.ParentedPrefab,
                     followerPrefab = DisplayPrefab,
-                    childName = "Pelvis",
-                    localPos = new Vector3(-0.29391F, 0.11272F, 0.01421F),
-                    localAngles = new Vector3(349.0753F, 78.62788F, 175.2363F),
+                    childName = "Finger42R",
+                    localPos = new Vector3(0.0854F, 0.02972F, 0.03842F),
+                    localAngles = new Vector3(287.5135F, 139.0516F, 215.7942F),
                     localScale = new Vector3(0.1F, 0.1F, 0.1F)
                 }
             });
@@ -101,10 +100,10 @@ namespace stormincursion
                 {
                     ruleType = ItemDisplayRuleType.ParentedPrefab,
                     followerPrefab = DisplayPrefab,
-                    childName = "Pelvis",
-                    localPos = new Vector3(0.2294F, -0.04192F, -0.08263F),
-                    localAngles = new Vector3(356.3836F, 200.2574F, 215.6173F),
-                    localScale = new Vector3(0.1F, 0.1F, 0.1F)
+                    childName = "Finger42R",
+                    localPos = new Vector3(0.02734F, 0.0535F, -0.00262F),
+                    localAngles = new Vector3(8.78994F, 135.2391F, 187.1553F),
+                    localScale = new Vector3(0.02F, 0.02F, 0.02F)
                 }
             });
 
@@ -114,9 +113,9 @@ namespace stormincursion
                 {
                     ruleType = ItemDisplayRuleType.ParentedPrefab,
                     followerPrefab = DisplayPrefab,
-                    childName = "Pelvis",
-                    localPos = new Vector3(0.23394F, 0.04239F, -0.08164F),
-                    localAngles = new Vector3(22.70468F, 207.8264F, 222.9708F),
+                    childName = "Finger42R",
+                    localPos = new Vector3(-0.08916F, 0.06863F, -0.04224F),
+                    localAngles = new Vector3(4.03309F, 332.023F, 175.0864F),
                     localScale = new Vector3(0.1F, 0.1F, 0.1F)
                 }
             });
@@ -127,10 +126,10 @@ namespace stormincursion
                 {
                     ruleType = ItemDisplayRuleType.ParentedPrefab,
                     followerPrefab = DisplayPrefab,
-                    childName = "PlatformBase",
-                    localPos = new Vector3(0.09744F, 0.06356F, 0.47667F),
-                    localAngles = new Vector3(71.08884F, 94.37516F, 0.27166F),
-                    localScale = new Vector3(0.1F, 0.1F, 0.1F)
+                    childName = "FootFrontREnd",
+                    localPos = new Vector3(-0.01523F, -0.13549F, 0.00226F),
+                    localAngles = new Vector3(2.1712F, 80.21092F, 1.84608F),
+                    localScale = new Vector3(0.2F, 0.2F, 0.2F)
                 }
             });
 
@@ -140,10 +139,10 @@ namespace stormincursion
                 {
                     ruleType = ItemDisplayRuleType.ParentedPrefab,
                     followerPrefab = DisplayPrefab,
-                    childName = "Pelvis",
-                    localPos = new Vector3(0.28263F, -0.0222F, 0.18861F),
-                    localAngles = new Vector3(359.8702F, 190.9554F, 178.3042F),
-                    localScale = new Vector3(0.20234F, 0.2F, 0.2F)
+                    childName = "HandR",
+                    localPos = new Vector3(-0.21947F, 0.53289F, 0.02554F),
+                    localAngles = new Vector3(23.84824F, 175.8003F, 149.9765F),
+                    localScale = new Vector3(0.3F, 0.3F, 0.3F)
                 }
             });
 
@@ -154,9 +153,9 @@ namespace stormincursion
                     ruleType = ItemDisplayRuleType.ParentedPrefab,
                     followerPrefab = DisplayPrefab,
                     childName = "HandR",
-                    localPos = new Vector3(-0.30746F, -0.39923F, 1.37383F),
-                    localAngles = new Vector3(1.14964F, 44.07939F, 224.1886F),
-                    localScale = new Vector3(0.5F, 0.5F, 0.5F)
+                    localPos = new Vector3(-0.56493F, -0.77639F, 0.52119F),
+                    localAngles = new Vector3(286.0565F, 301.0045F, 354.6329F),
+                    localScale = new Vector3(4F, 4F, 4F)
                 }
             });
 
@@ -166,9 +165,9 @@ namespace stormincursion
                 {
                     ruleType = ItemDisplayRuleType.ParentedPrefab,
                     followerPrefab = DisplayPrefab,
-                    childName = "Pelvis",
-                    localPos = new Vector3(0.09129F, -0.03002F, -0.18635F),
-                    localAngles = new Vector3(17.05484F, 192.1197F, 180.2232F),
+                    childName = "Finger42R",
+                    localPos = new Vector3(-0.087F, 0.01669F, 0.02402F),
+                    localAngles = new Vector3(333.815F, 0.60752F, 187.0098F),
                     localScale = new Vector3(0.1F, 0.1F, 0.1F)
                 }
             });
@@ -179,10 +178,10 @@ namespace stormincursion
                 {
                     ruleType = ItemDisplayRuleType.ParentedPrefab,
                     followerPrefab = DisplayPrefab,
-                    childName = "Pelvis",
-                    localPos = new Vector3(0.17902F, 0.12941F, -0.0086F),
-                    localAngles = new Vector3(45.73383F, 121.9203F, 203.6731F),
-                    localScale = new Vector3(0.1F, 0.1F, 0.1F)
+                    childName = "Finger3R",
+                    localPos = new Vector3(0.00297F, 0.01669F, 0.00537F),
+                    localAngles = new Vector3(16.04355F, 174.1973F, 188.3252F),
+                    localScale = new Vector3(0.03F, 0.03F, 0.03F)
                 }
             });
 
@@ -192,9 +191,9 @@ namespace stormincursion
                 {
                     ruleType = ItemDisplayRuleType.ParentedPrefab,
                     followerPrefab = DisplayPrefab,
-                    childName = "Pelvis",
-                    localPos = new Vector3(0.24916F, -0.14349F, 0.13096F),
-                    localAngles = new Vector3(24.02735F, 187.3164F, 242.598F),
+                    childName = "Head",
+                    localPos = new Vector3(-0.06078F, 0.02271F, 0.13807F),
+                    localAngles = new Vector3(33.11209F, 167.9209F, 278.5068F),
                     localScale = new Vector3(0.1F, 0.1F, 0.1F)
                 }
             });
@@ -205,9 +204,9 @@ namespace stormincursion
                 {
                     ruleType = ItemDisplayRuleType.ParentedPrefab,
                     followerPrefab = DisplayPrefab,
-                    childName = "Pelvis",
-                    localPos = new Vector3(0.22621F, 0.06674F, 0.07456F),
-                    localAngles = new Vector3(42.7019F, 308.1681F, 52.06086F),
+                    childName = "HandR",
+                    localPos = new Vector3(0.02525F, 0.11796F, 0.009F),
+                    localAngles = new Vector3(24.35769F, 167.0482F, 6.86717F),
                     localScale = new Vector3(0.1F, 0.1F, 0.1F)
                 }
             });
@@ -218,10 +217,10 @@ namespace stormincursion
                 {
                     ruleType = ItemDisplayRuleType.ParentedPrefab,
                     followerPrefab = DisplayPrefab,
-                    childName = "Pelvis",
-                    localPos = new Vector3(-0.15496F, 0.31148F, 0.17763F),
-                    localAngles = new Vector3(359.2818F, 165.2045F, 22.43329F),
-                    localScale = new Vector3(0.1F, 0.1F, 0.1F)
+                    childName = "HandR",
+                    localPos = new Vector3(-0.0319F, -0.03089F, 0.0073F),
+                    localAngles = new Vector3(350.6919F, 166.2763F, 14.90965F),
+                    localScale = new Vector3(0.13F, 0.13F, 0.13F)
                 }
             });
 
@@ -231,9 +230,9 @@ namespace stormincursion
                 {
                     ruleType = ItemDisplayRuleType.ParentedPrefab,
                     followerPrefab = DisplayPrefab,
-                    childName = "Head",
-                    localPos = new Vector3(-0.02933F, 0.20975F, -0.17579F),
-                    localAngles = new Vector3(68.71137F, 189.0023F, 281.6643F),
+                    childName = "HandR",
+                    localPos = new Vector3(-0.07691F, 0.08157F, -0.03427F),
+                    localAngles = new Vector3(61.01277F, 183.4492F, 323.1057F),
                     localScale = new Vector3(0.1F, 0.1F, 0.1F)
                 }
             });
@@ -244,9 +243,9 @@ namespace stormincursion
                 {
                     ruleType = ItemDisplayRuleType.ParentedPrefab,
                     followerPrefab = DisplayPrefab,
-                    childName = "Pelvis",
-                    localPos = new Vector3(0.20716F, 0.06424F, 0.00639F),
-                    localAngles = new Vector3(45.66182F, 266.3139F, 305.0764F),
+                    childName = "HandR",
+                    localPos = new Vector3(0.15723F, -0.00792F, -0.00185F),
+                    localAngles = new Vector3(12.36965F, 287.7682F, 290.5601F),
                     localScale = new Vector3(0.1F, 0.1F, 0.1F)
                 }
             });
@@ -257,9 +256,9 @@ namespace stormincursion
                 {
                     ruleType = ItemDisplayRuleType.ParentedPrefab,
                     followerPrefab = DisplayPrefab,
-                    childName = "Pelvis",
-                    localPos = new Vector3(0.03682F, 0.12451F, -0.42984F),
-                    localAngles = new Vector3(29.91208F, 47.84864F, 82.28661F),
+                    childName = "HandR",
+                    localPos = new Vector3(-0.06933F, 0.02573F, -0.07776F),
+                    localAngles = new Vector3(29.91208F, 47.84863F, 82.28661F),
                     localScale = new Vector3(0.1F, 0.1F, 0.1F)
                 }
             });

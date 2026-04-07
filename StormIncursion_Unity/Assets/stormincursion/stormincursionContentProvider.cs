@@ -1,9 +1,10 @@
-using RoR2.ContentManagement;
-using UnityEngine;
-using RoR2;
-using System.Collections;
-using RoR2.ExpansionManagement;
+using BepInEx.Logging;
 using R2API;
+using RoR2;
+using RoR2.ContentManagement;
+using RoR2.ExpansionManagement;
+using System.Collections;
+using UnityEngine;
 namespace stormincursion
 {
     public class stormincursionContent : IContentPackProvider
@@ -42,18 +43,32 @@ namespace stormincursion
 
             Keychain_Item.Init(_myBundle.LoadAsset<ItemDef>("Keychain"), stormincursionMain.instance.Config, _myBundle.LoadAsset<GameObject>("KeyChainDisplay"));
             KeychainInvis_Item.Init(_myBundle.LoadAsset<ItemDef>("Keychain_InvisTracker"), stormincursionMain.instance.Config, null);
+
             IceCream_Item.Init(_myBundle.LoadAsset<ItemDef>("IcecreamEclipse"), stormincursionMain.instance.Config, _myBundle.LoadAsset<GameObject>("IceCreamDisplay"));
+
             SapphireRing_Item.Init(_myBundle.LoadAsset<ItemDef>("SapphireRing"), stormincursionMain.instance.Config, _myBundle.LoadAsset<GameObject>("SapphireRingDisplay"));
-            stormincursionContentPack.itemDefs.Add(new ItemDef[] { Keychain_Item.ItemDef, KeychainInvis_Item.ItemDef, IceCream_Item.ItemDef, SapphireRing_Item.ItemDef});
+
+            MemorableWallet_item.Init(_myBundle.LoadAsset<ItemDef>("MemorableWallet"), stormincursionMain.instance.Config, null);
+            WalletCount_Item.Init(_myBundle.LoadAsset<ItemDef>("MemorableWalletCount"), stormincursionMain.instance.Config, null);
+            
+
+            stormincursionContentPack.itemDefs.Add(new ItemDef[] { Keychain_Item.ItemDef, KeychainInvis_Item.ItemDef, IceCream_Item.ItemDef, SapphireRing_Item.ItemDef, MemorableWallet_item.ItemDef, WalletCount_Item.ItemDef});
 
 
             // language
             R2API.LanguageAPI.Add("stormincursion_lang", System.IO.File.ReadAllText(System.IO.Path.Combine(System.IO.Path.GetDirectoryName(stormincursionMain.pluginInfo.Location),"stormincursion_lang.language")));
 
+            // compatibility
+            if (stormincursionMain.isLookingGlassInstalled)
+            {
+                RoR2Application.onLoad += Compat.LGCompat;
+                stormincursionMain.logger.LogInfo("Looking glass found, calling compatibility cs file.");
+            }
+
         }
         public IEnumerator GenerateContentPackAsync(GetContentPackAsyncArgs args)
         {
-             ContentPack.Copy(stormincursionContentPack, args.output);
+            ContentPack.Copy(stormincursionContentPack, args.output);
             args.ReportProgress(1f);
             yield break;
         }
