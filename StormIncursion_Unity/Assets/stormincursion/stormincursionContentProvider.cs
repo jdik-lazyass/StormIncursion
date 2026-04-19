@@ -1,9 +1,11 @@
 using BepInEx.Logging;
 using R2API;
+using R2API.ScriptableObjects;
 using RoR2;
 using RoR2.ContentManagement;
 using RoR2.ExpansionManagement;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 namespace stormincursion
 {
@@ -26,13 +28,11 @@ namespace stormincursion
             }
 
             //whole stuff
-
             _myBundle = asyncOperation.assetBundle;
             var expansionDef = _myBundle.LoadAsset<ExpansionDef>("StormIncursion_Expansion");
             stormincursionContentPack.expansionDefs.Add(new ExpansionDef[] { expansionDef });
 
             //buffs
-
             var keychainBuff = _myBundle.LoadAsset<BuffDef>("KeychainBuff");
             var icecreamCD = _myBundle.LoadAsset<BuffDef>("IcecreamCooldown");
             KeychainBuff.Init(keychainBuff);
@@ -40,7 +40,6 @@ namespace stormincursion
             stormincursionContentPack.buffDefs.Add(new BuffDef[] { keychainBuff, icecreamCD });
 
             //items
-
             Keychain_Item.Init(_myBundle.LoadAsset<ItemDef>("Keychain"), stormincursionMain.instance.Config, _myBundle.LoadAsset<GameObject>("KeyChainDisplay"));
             KeychainInvis_Item.Init(_myBundle.LoadAsset<ItemDef>("Keychain_InvisTracker"), stormincursionMain.instance.Config, null);
 
@@ -51,9 +50,11 @@ namespace stormincursion
             MemorableWallet_item.Init(_myBundle.LoadAsset<ItemDef>("MemorableWallet"), stormincursionMain.instance.Config, null);
             WalletCount_Item.Init(_myBundle.LoadAsset<ItemDef>("MemorableWalletCount"), stormincursionMain.instance.Config, null);
             
-
             stormincursionContentPack.itemDefs.Add(new ItemDef[] { Keychain_Item.ItemDef, KeychainInvis_Item.ItemDef, IceCream_Item.ItemDef, SapphireRing_Item.ItemDef, MemorableWallet_item.ItemDef, WalletCount_Item.ItemDef});
 
+            // difficulty
+            var serializableDifficulty = _myBundle.LoadAsset<SerializableDifficultyDef>("Storm_Difficulty");
+            DifficultyAPI.AddDifficulty(serializableDifficulty);
 
             // language
             R2API.LanguageAPI.Add("stormincursion_lang", System.IO.File.ReadAllText(System.IO.Path.Combine(System.IO.Path.GetDirectoryName(stormincursionMain.pluginInfo.Location),"stormincursion_lang.language")));
@@ -65,6 +66,10 @@ namespace stormincursion
                 stormincursionMain.logger.LogInfo("Looking glass found, calling compatibility cs file.");
             }
 
+            // rebalances
+            AtGNerf.Init();
+            MissileAdj.Init();
+            CommandoGrenadeBuff.Init();
         }
         public IEnumerator GenerateContentPackAsync(GetContentPackAsyncArgs args)
         {

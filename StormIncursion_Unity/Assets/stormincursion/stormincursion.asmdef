@@ -31,7 +31,8 @@
         "R2API.RecalculateStats.dll",
         "R2API.Language.dll",
         "R2API.Items.dll",
-        "LookingGlass.dll"
+        "LookingGlass.dll",
+        "R2API.Difficulty.dll"
     ],
     "autoReferenced": true,
     "defineConstraints": [],

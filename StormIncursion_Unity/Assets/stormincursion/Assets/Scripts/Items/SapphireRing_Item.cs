@@ -94,6 +94,32 @@ namespace stormincursion
                 }
             });
 
+            displayRules.Add("mdlEngiTurret", new ItemDisplayRule[]
+            {
+                new ItemDisplayRule
+                {
+                    ruleType = ItemDisplayRuleType.ParentedPrefab,
+                    followerPrefab = DisplayPrefab,
+                    childName = "HeadCenter",
+                    localPos = new Vector3(-0.08732F, -0.08337F, 0.19637F),
+                    localAngles = new Vector3(53.15427F, 201.1938F, 49.45714F),
+                    localScale = new Vector3(0.1F, 0.1F, 0.1F)
+                }
+            });
+
+            displayRules.Add("mdlEngiWalkerTurret", new ItemDisplayRule[]
+            {
+                new ItemDisplayRule
+                {
+                    ruleType = ItemDisplayRuleType.ParentedPrefab,
+                    followerPrefab = DisplayPrefab,
+                    childName = "HeadCenter",
+                    localPos = new Vector3(-0.08732F, -0.08337F, 0.19637F),
+                    localAngles = new Vector3(53.15427F, 201.1938F, 49.45714F),
+                    localScale = new Vector3(0.1F, 0.1F, 0.1F)
+                }
+            });
+
             displayRules.Add("mdlMage", new ItemDisplayRule[]
             {
                 new ItemDisplayRule
