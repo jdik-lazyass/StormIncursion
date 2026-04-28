@@ -341,7 +341,7 @@ namespace stormincursion
             if (setStateOnHurt && setStateOnHurt.canBeFrozen)
             {
                 var extraStacks = stackCount - 1;
-                setStateOnHurt.SetFrozen(remaining * FreezeTime.Value + (FreezeTimePerStack.Value * extraStacks));
+                setStateOnHurt.SetFrozen(remaining * (FreezeTime.Value + (FreezeTimePerStack.Value * extraStacks)));
             }
 
             attackerBody.AddTimedBuff(IcecreamCooldown_buff.BuffDef, CooldownTime.Value);

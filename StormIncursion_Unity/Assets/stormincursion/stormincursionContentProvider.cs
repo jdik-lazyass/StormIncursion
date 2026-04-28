@@ -69,7 +69,12 @@ namespace stormincursion
             // rebalances
             AtGNerf.Init();
             MissileAdj.Init();
+            FaradaySpursAdj.Init();
+
+            CreditCostAdjustment.Init();
+
             CommandoGrenadeBuff.Init();
+            CommandoFMJBuff.Init();
         }
         public IEnumerator GenerateContentPackAsync(GetContentPackAsyncArgs args)
         {

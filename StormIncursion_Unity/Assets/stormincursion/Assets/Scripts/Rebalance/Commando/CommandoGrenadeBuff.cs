@@ -25,10 +25,12 @@ public class CommandoGrenadeBuff
         explosion.destroyOnEnemy = true;
 
         var simple = grenadePrefab.GetComponent<ProjectileSimple>();
-        simple.desiredForwardSpeed = 75f; 
+        simple.desiredForwardSpeed = 75f;
+
+        LanguageAPI.Add("COMMANDO_SPECIAL_ALT1_DESCRIPTION",
+        $"Throw a grenade that explodes for <style=cIsDamage>700% damage</style>. Can hold up to 2. Explodes on contact.");
     }
 
-    // Update is called once per frame
     private static void Hooks()
     {
         

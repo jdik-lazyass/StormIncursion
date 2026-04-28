@@ -9,13 +9,14 @@ using MonoMod.Cil;
 
 public class AtGNerf
 {
-    // Start is called before the first frame update
     public static void Init()
     {
         Hooks();
+
+        LanguageAPI.Add("ITEM_MISSILE_DESC",
+                $"<style=cIsDamage>10%</style> chance to fire a missile that deals <style=cIsDamage>150%</style> <style=cStack>(+150% per stack)</style> TOTAL damage.");
     }
 
-    // Update is called once per frame
     private static void Hooks()
     {
         IL.RoR2.GlobalEventManager.ProcessHitEnemy += GlobalEventManager_ProcessHitEnemy;
