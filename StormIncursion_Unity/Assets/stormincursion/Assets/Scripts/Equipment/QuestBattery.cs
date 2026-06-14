@@ -3,25 +3,21 @@ using R2API;
 using RoR2;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
 namespace stormincursion
 {
-    public class Keychain_Item
+    public class QuestBattery
     {
-        public static ItemDef ItemDef;
+        public static EquipmentDef EquipmentDef;
         public static GameObject DisplayPrefab;
-        public static ConfigEntry<float> LuckInc;
-        public static ConfigEntry<int> LuckInc_MaxStack;
 
-        public static void Init(ItemDef itemDef, ConfigFile config, GameObject displayPrefab)
+        public static void Init(EquipmentDef equipmentDef, ConfigFile config)
         {
-            ItemDef = itemDef;
-            DisplayPrefab = displayPrefab;
+            EquipmentDef = equipmentDef;
+            //DisplayPrefab = displayPrefab;
 
-            LuckInc = config.Bind<float>("Item: Keychain", "Luck Inc", 0.01f, "");
-            LuckInc_MaxStack = config.Bind<int>("Item: Keychain", "Luck Inc Max Stack", 5, "");
-
-            SetupDisplayRules();
+            //SetupDisplayRules();
             Hooks();
         }
 
@@ -35,9 +31,9 @@ namespace stormincursion
                 {
                     ruleType = ItemDisplayRuleType.ParentedPrefab,
                     followerPrefab = DisplayPrefab,
-                    childName = "Pelvis",
-                    localPos = new Vector3(0.14396F, -0.03933F, -0.19248F),
-                    localAngles = new Vector3(330.3721F, 324.9917F, 176.7163F),
+                    childName = "HeadCenter",
+                    localPos = new Vector3(0.08829F, -0.0975F, 0.22369F),
+                    localAngles = new Vector3(58.07353F, 290.6651F, 91.21642F),
                     localScale = new Vector3(0.15083F, 0.14789F, 0.1384F)
                 }
             });
@@ -48,9 +44,9 @@ namespace stormincursion
                 {
                     ruleType = ItemDisplayRuleType.ParentedPrefab,
                     followerPrefab = DisplayPrefab,
-                    childName = "Pelvis",
-                    localPos = new Vector3(0.15941F, -0.0324F, 0.01423F),
-                    localAngles = new Vector3(45.73383F, 121.9203F, 203.6731F),
+                    childName = "HeadCenter",
+                    localPos = new Vector3(0.08947F, -0.10576F, 0.13781F),
+                    localAngles = new Vector3(62.02094F, 280.4277F, 42.50446F),
                     localScale = new Vector3(0.1F, 0.1F, 0.1F)
                 }
             });
@@ -61,11 +57,10 @@ namespace stormincursion
                 {
                     ruleType = ItemDisplayRuleType.ParentedPrefab,
                     followerPrefab = DisplayPrefab,
-                    childName = "Pelvis",
-                    localPos = new Vector3(0.15175F, 0.04859F, -0.12149F),
-                    localAngles = new Vector3(24.66067F, 156.4204F, 184.2085F),
+                    childName = "Head",
+                    localPos = new Vector3(0.04876F, -0.03571F, 0.14836F),
+                    localAngles = new Vector3(66.21909F, 174.2497F, 326.6435F),
                     localScale = new Vector3(0.1F, 0.1F, 0.1F)
-
                 }
             });
 
@@ -75,9 +70,9 @@ namespace stormincursion
                 {
                     ruleType = ItemDisplayRuleType.ParentedPrefab,
                     followerPrefab = DisplayPrefab,
-                    childName = "Hip",
-                    localPos = new Vector3(1.14234F, 2.97885F, 0.99265F),
-                    localAngles = new Vector3(12.52436F, 181.5724F, 184.6927F),
+                    childName = "Chest",
+                    localPos = new Vector3(0.72464F, 1.58983F, 2.42929F),
+                    localAngles = new Vector3(76.99681F, 63.85303F, 47.08825F),
                     localScale = new Vector3(1F, 1F, 1F)
                 }
             });
@@ -88,9 +83,9 @@ namespace stormincursion
                 {
                     ruleType = ItemDisplayRuleType.ParentedPrefab,
                     followerPrefab = DisplayPrefab,
-                    childName = "Pelvis",
-                    localPos = new Vector3(-0.29391F, 0.11272F, 0.01421F),
-                    localAngles = new Vector3(349.0753F, 78.62788F, 175.2363F),
+                    childName = "HeadCenter",
+                    localPos = new Vector3(-0.08732F, -0.08337F, 0.19637F),
+                    localAngles = new Vector3(53.15427F, 201.1938F, 49.45714F),
                     localScale = new Vector3(0.1F, 0.1F, 0.1F)
                 }
             });
@@ -127,9 +122,9 @@ namespace stormincursion
                 {
                     ruleType = ItemDisplayRuleType.ParentedPrefab,
                     followerPrefab = DisplayPrefab,
-                    childName = "Pelvis",
-                    localPos = new Vector3(0.2294F, -0.04192F, -0.08263F),
-                    localAngles = new Vector3(356.3836F, 200.2574F, 215.6173F),
+                    childName = "Head",
+                    localPos = new Vector3(-0.05961F, -0.04141F, 0.14436F),
+                    localAngles = new Vector3(59.7324F, 173.0528F, 23.55104F),
                     localScale = new Vector3(0.1F, 0.1F, 0.1F)
                 }
             });
@@ -140,9 +135,9 @@ namespace stormincursion
                 {
                     ruleType = ItemDisplayRuleType.ParentedPrefab,
                     followerPrefab = DisplayPrefab,
-                    childName = "Pelvis",
-                    localPos = new Vector3(0.23394F, 0.04239F, -0.08164F),
-                    localAngles = new Vector3(22.70468F, 207.8264F, 222.9708F),
+                    childName = "Head",
+                    localPos = new Vector3(-0.07125F, 0.02026F, 0.19109F),
+                    localAngles = new Vector3(70.75821F, 205.8668F, 53.34343F),
                     localScale = new Vector3(0.1F, 0.1F, 0.1F)
                 }
             });
@@ -154,9 +149,9 @@ namespace stormincursion
                     ruleType = ItemDisplayRuleType.ParentedPrefab,
                     followerPrefab = DisplayPrefab,
                     childName = "PlatformBase",
-                    localPos = new Vector3(0.09744F, 0.06356F, 0.47667F),
-                    localAngles = new Vector3(71.08884F, 94.37516F, 0.27166F),
-                    localScale = new Vector3(0.1F, 0.1F, 0.1F)
+                    localPos = new Vector3(0.09956F, -0.62205F, 0.47659F),
+                    localAngles = new Vector3(27.46745F, 186.9706F, 345.0695F),
+                    localScale = new Vector3(0.3F, 0.3F, 0.3F)
                 }
             });
 
@@ -166,10 +161,10 @@ namespace stormincursion
                 {
                     ruleType = ItemDisplayRuleType.ParentedPrefab,
                     followerPrefab = DisplayPrefab,
-                    childName = "Pelvis",
-                    localPos = new Vector3(0.28263F, -0.0222F, 0.18861F),
-                    localAngles = new Vector3(359.8702F, 190.9554F, 178.3042F),
-                    localScale = new Vector3(0.20234F, 0.2F, 0.2F)
+                    childName = "HeadCenter",
+                    localPos = new Vector3(-0.04794F, -0.12204F, 0.18907F),
+                    localAngles = new Vector3(63.11122F, 198.9952F, 38.56545F),
+                    localScale = new Vector3(0.15F, 0.15F, 0.15F)
                 }
             });
 
@@ -179,10 +174,10 @@ namespace stormincursion
                 {
                     ruleType = ItemDisplayRuleType.ParentedPrefab,
                     followerPrefab = DisplayPrefab,
-                    childName = "HandR",
-                    localPos = new Vector3(-0.26282F, -0.38102F, 1.48507F),
-                    localAngles = new Vector3(26.58615F, 24.69656F, 220.1612F),
-                    localScale = new Vector3(0.5F, 0.5F, 0.5F)
+                    childName = "HeadCenter",
+                    localPos = new Vector3(-1.32146F, 3.74112F, -0.45552F),
+                    localAngles = new Vector3(342.3329F, 168.6139F, 133.2572F),
+                    localScale = new Vector3(1.5F, 1.5F, 1.5F)
                 }
             });
 
@@ -192,9 +187,9 @@ namespace stormincursion
                 {
                     ruleType = ItemDisplayRuleType.ParentedPrefab,
                     followerPrefab = DisplayPrefab,
-                    childName = "Pelvis",
-                    localPos = new Vector3(0.09129F, -0.03002F, -0.18635F),
-                    localAngles = new Vector3(17.05484F, 192.1197F, 180.2232F),
+                    childName = "Head",
+                    localPos = new Vector3(0.0843F, -0.01889F, 0.15712F),
+                    localAngles = new Vector3(58.03229F, 195.7653F, 329.7492F),
                     localScale = new Vector3(0.1F, 0.1F, 0.1F)
                 }
             });
@@ -205,9 +200,9 @@ namespace stormincursion
                 {
                     ruleType = ItemDisplayRuleType.ParentedPrefab,
                     followerPrefab = DisplayPrefab,
-                    childName = "Pelvis",
-                    localPos = new Vector3(0.17902F, 0.12941F, -0.0086F),
-                    localAngles = new Vector3(45.73383F, 121.9203F, 203.6731F),
+                    childName = "Head",
+                    localPos = new Vector3(-0.06539F, -0.00391F, 0.11305F),
+                    localAngles = new Vector3(69.37233F, 123.9522F, 2.10089F),
                     localScale = new Vector3(0.1F, 0.1F, 0.1F)
                 }
             });
@@ -218,9 +213,9 @@ namespace stormincursion
                 {
                     ruleType = ItemDisplayRuleType.ParentedPrefab,
                     followerPrefab = DisplayPrefab,
-                    childName = "Pelvis",
-                    localPos = new Vector3(0.24916F, -0.14349F, 0.13096F),
-                    localAngles = new Vector3(24.02735F, 187.3164F, 242.598F),
+                    childName = "Head",
+                    localPos = new Vector3(0.0373F, 0.08235F, 0.20011F),
+                    localAngles = new Vector3(67.80087F, 329.6857F, 135.3359F),
                     localScale = new Vector3(0.1F, 0.1F, 0.1F)
                 }
             });
@@ -231,9 +226,9 @@ namespace stormincursion
                 {
                     ruleType = ItemDisplayRuleType.ParentedPrefab,
                     followerPrefab = DisplayPrefab,
-                    childName = "Pelvis",
-                    localPos = new Vector3(0.22621F, 0.06674F, 0.07456F),
-                    localAngles = new Vector3(42.7019F, 308.1681F, 52.06086F),
+                    childName = "Head",
+                    localPos = new Vector3(0.06265F, -0.00475F, 0.15467F),
+                    localAngles = new Vector3(54.27256F, 277.8099F, 61.19162F),
                     localScale = new Vector3(0.1F, 0.1F, 0.1F)
                 }
             });
@@ -244,10 +239,10 @@ namespace stormincursion
                 {
                     ruleType = ItemDisplayRuleType.ParentedPrefab,
                     followerPrefab = DisplayPrefab,
-                    childName = "Pelvis",
-                    localPos = new Vector3(-0.15496F, 0.31148F, 0.17763F),
-                    localAngles = new Vector3(359.2818F, 165.2045F, 22.43329F),
-                    localScale = new Vector3(0.1F, 0.1F, 0.1F)
+                    childName = "Head",
+                    localPos = new Vector3(0.15236F, 0.04069F, 0.25227F),
+                    localAngles = new Vector3(62.90203F, 200.8919F, 342.4941F),
+                    localScale = new Vector3(0.2F, 0.2F, 0.2F)
                 }
             });
 
@@ -258,8 +253,8 @@ namespace stormincursion
                     ruleType = ItemDisplayRuleType.ParentedPrefab,
                     followerPrefab = DisplayPrefab,
                     childName = "Head",
-                    localPos = new Vector3(-0.02933F, 0.20975F, -0.17579F),
-                    localAngles = new Vector3(68.71137F, 189.0023F, 281.6643F),
+                    localPos = new Vector3(-0.03463F, 0.19023F, -0.09039F),
+                    localAngles = new Vector3(34.96603F, 88.9302F, 141.5371F),
                     localScale = new Vector3(0.1F, 0.1F, 0.1F)
                 }
             });
@@ -270,9 +265,9 @@ namespace stormincursion
                 {
                     ruleType = ItemDisplayRuleType.ParentedPrefab,
                     followerPrefab = DisplayPrefab,
-                    childName = "Pelvis",
-                    localPos = new Vector3(0.20716F, 0.06424F, 0.00639F),
-                    localAngles = new Vector3(45.66182F, 266.3139F, 305.0764F),
+                    childName = "Head",
+                    localPos = new Vector3(-0.06166F, -0.21606F, 0.11747F),
+                    localAngles = new Vector3(353.7832F, 117.948F, 314.3687F),
                     localScale = new Vector3(0.1F, 0.1F, 0.1F)
                 }
             });
@@ -283,65 +278,65 @@ namespace stormincursion
                 {
                     ruleType = ItemDisplayRuleType.ParentedPrefab,
                     followerPrefab = DisplayPrefab,
-                    childName = "Pelvis",
-                    localPos = new Vector3(0.03682F, 0.12451F, -0.42984F),
-                    localAngles = new Vector3(29.91208F, 47.84864F, 82.28661F),
+                    childName = "Head",
+                    localPos = new Vector3(0.01997F, 0.21986F, -0.10706F),
+                    localAngles = new Vector3(21.74954F, 67.9724F, 116.428F),
                     localScale = new Vector3(0.1F, 0.1F, 0.1F)
                 }
             });
 
-            ItemAPI.Add(new CustomItem(ItemDef, displayRules));
+            ItemAPI.Add(new CustomEquipment(EquipmentDef, displayRules));
+        }
+
+        public static void BreakBattery(CharacterBody body)
+        {
+            if (body?.inventory == null) return;
+
+            body.inventory.SetEquipmentIndex(EquipmentIndex.None, true);
+
+            Chat.SendBroadcastChat(new Chat.SimpleChatMessage
+            {
+                baseToken = "BATTERY_BROKE_MESSAGE"
+            });
+        }
+
+        private static void CheckBreakConditions(
+            On.RoR2.HealthComponent.orig_TakeDamage orig,
+            HealthComponent self,
+            DamageInfo damageInfo)
+        {
+            orig(self, damageInfo);
+
+            if (!NetworkServer.active) return;
+
+            CharacterBody body = self.body;
+            if (body == null) return;
+
+            if (body.equipmentSlot?.equipmentIndex != EquipmentDef.equipmentIndex) return;
+
+            //bool isFromDOT = damageInfo.damageType.damageSource == DamageSource.DOT;
+            bool isLowHP = self.combinedHealthFraction < 0.4f;
+
+            if (isLowHP)
+            {
+                BreakBattery(body);
+            }
+        }
+
+        private static bool EquipmentActionMain(On.RoR2.EquipmentSlot.orig_PerformEquipmentAction orig, EquipmentSlot self, EquipmentDef def)
+        {
+            if (def == EquipmentDef) 
+            {
+                return false;
+            }
+
+            return orig(self, def);
         }
 
         private static void Hooks()
         {
-            On.RoR2.PurchaseInteraction.OnInteractionBegin += PurchaseInteraction_OnInteractionBegin;
-            On.RoR2.CharacterBody.Start += CharacterBody_Start;
-        }
-
-        private static void PurchaseInteraction_OnInteractionBegin(On.RoR2.PurchaseInteraction.orig_OnInteractionBegin orig, PurchaseInteraction self, Interactor activator)
-        {
-            orig(self, activator);
-
-            if (self.GetComponent<ChestBehavior>() == null && self.GetComponent<MultiShopController>() == null) return;
-
-            if (self.costType != CostTypeIndex.Money) return;
-            if (self.cost <= 0) return;
-
-            CharacterBody body = activator.GetComponent<CharacterBody>();
-            if (body == null) return;
-            if (body.master?.inventory == null) return;
-
-            int stackCount = body.master.inventory.GetItemCountEffective(ItemDef);
-            if (stackCount <= 0) return;
-
-            int buffCount = body.inventory.GetItemCountEffective(KeychainInvis_Item.ItemDef);
-            if (buffCount < 15)
-            {
-                body.inventory.GiveItemPermanent(KeychainInvis_Item.ItemDef);
-                buffCount = body.inventory.GetItemCountEffective(KeychainInvis_Item.ItemDef);
-            }
-            else
-            {
-                body.inventory.RemoveItemPermanent(KeychainInvis_Item.ItemDef, int.MaxValue);
-                buffCount = body.inventory.GetItemCountEffective(KeychainInvis_Item.ItemDef);
-            }
-                
-
-            body.SetBuffCount(KeychainBuff.BuffDef.buffIndex, buffCount);
-        }
-
-        private static void CharacterBody_Start(On.RoR2.CharacterBody.orig_Start orig, CharacterBody self)
-        {
-            orig(self);
-
-            if (self.master?.inventory == null) return;
-            if (self.master.inventory.GetItemCountEffective(ItemDef) <= 0) return;
-
-            int savedCount = self.master.inventory.GetItemCountEffective(KeychainInvis_Item.ItemDef);
-            if (savedCount <= 0) return;
-
-            self.SetBuffCount(KeychainBuff.BuffDef.buffIndex, savedCount);
+            On.RoR2.EquipmentSlot.PerformEquipmentAction += EquipmentActionMain;
+            On.RoR2.HealthComponent.TakeDamage += CheckBreakConditions;
         }
     }
 }

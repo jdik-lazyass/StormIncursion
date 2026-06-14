@@ -25,6 +25,11 @@
         "WALLET_NAME": "Memorable Wallet",
         "WALLET_PICKUP": "Saves money from purchases and gives it on the start of next stage.",
         "WALLET_DESC": "Whenever you make a gold purchase, stores <style=cIsDamage>25%</style> <style=cStack>(+ 25% per stack, hyperbolic)</style> of spent gold. Upon entering next stage, gain all the stored gold back. Removes half of stored gold stacks upon entering next stage.",
+
+        "BATTERY_BROKE_MESSAGE": "<style=cDeath>Battery broke!</style>",
+        "QUESTBATTERY_NAME": "Battery Cell",
+        "QUESTBATTERY_DESC": "Does nothing on its own. <style=cDeath>Will break if your health is under 40%.</style>",
+        "QUESTBATTERY_PICKUP": "Charged unit. <style=cDeath>Be careful.</style>",
     }
     "ru": {
         "KEYCHAIN_NAME": "Связка ключей",
@@ -43,5 +48,10 @@
         "ICECREAM_NAME": "Эскимо «Затмение»",
         "ICECREAM_PICKUP": "Stunning already stunned enemy freezes.",
         "ICECREAM_DESC": "<style=cIsUtility>Stunning</style> already <style=cIsUtility>stunned</style> enemy <style=cIsUtility>freezes</style> them for 2 <style=cStack>(+0.25 per stack)</style> times the duration of previously applied stun. Has an <style=cIsUtility>6 second</style> cooldown.",
+
+        "BATTERY_BROKE_MESSAGE": "<style=cDeath>Батарейка сломалась!</style>",
+        "QUESTBATTERY_NAME": "Элемент батареи",
+        "QUESTBATTERY_DESC": "Почти бесполезен. <style=cDeath>Сломается, если ваше здоровье опустится ниже 40%.</style>",
+        "QUESTBATTERY_PICKUP": "Частица батареи. <style=cDeath>Будьте с ней осторожны...</style>",
     }
 }

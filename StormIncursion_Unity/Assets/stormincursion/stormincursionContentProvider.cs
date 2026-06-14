@@ -16,7 +16,7 @@ namespace stormincursion
         public static ReadOnlyContentPack readOnlyContentPack => new ReadOnlyContentPack(stormincursionContentPack);
         internal static ContentPack stormincursionContentPack { get; } = new ContentPack();
 
-        private static AssetBundle _myBundle;
+        public static AssetBundle _myBundle;
 
         public IEnumerator LoadStaticContentAsync(LoadStaticContentAsyncArgs args)
         {
@@ -27,19 +27,19 @@ namespace stormincursion
                 yield return null;
             }
 
-            //whole stuff
+            // whole stuff
             _myBundle = asyncOperation.assetBundle;
             var expansionDef = _myBundle.LoadAsset<ExpansionDef>("StormIncursion_Expansion");
             stormincursionContentPack.expansionDefs.Add(new ExpansionDef[] { expansionDef });
 
-            //buffs
+            // buffs
             var keychainBuff = _myBundle.LoadAsset<BuffDef>("KeychainBuff");
             var icecreamCD = _myBundle.LoadAsset<BuffDef>("IcecreamCooldown");
             KeychainBuff.Init(keychainBuff);
             IcecreamCooldown_buff.Init(icecreamCD);
             stormincursionContentPack.buffDefs.Add(new BuffDef[] { keychainBuff, icecreamCD });
 
-            //items
+            // items
             Keychain_Item.Init(_myBundle.LoadAsset<ItemDef>("Keychain"), stormincursionMain.instance.Config, _myBundle.LoadAsset<GameObject>("KeyChainDisplay"));
             KeychainInvis_Item.Init(_myBundle.LoadAsset<ItemDef>("Keychain_InvisTracker"), stormincursionMain.instance.Config, null);
 
@@ -47,14 +47,22 @@ namespace stormincursion
 
             SapphireRing_Item.Init(_myBundle.LoadAsset<ItemDef>("SapphireRing"), stormincursionMain.instance.Config, _myBundle.LoadAsset<GameObject>("SapphireRingDisplay"));
 
-            MemorableWallet_item.Init(_myBundle.LoadAsset<ItemDef>("MemorableWallet"), stormincursionMain.instance.Config, null);
+            MemorableWallet_item.Init(_myBundle.LoadAsset<ItemDef>("MemorableWallet"), stormincursionMain.instance.Config, _myBundle.LoadAsset<GameObject>("WalletDisplay"));
             WalletCount_Item.Init(_myBundle.LoadAsset<ItemDef>("MemorableWalletCount"), stormincursionMain.instance.Config, null);
             
             stormincursionContentPack.itemDefs.Add(new ItemDef[] { Keychain_Item.ItemDef, KeychainInvis_Item.ItemDef, IceCream_Item.ItemDef, SapphireRing_Item.ItemDef, MemorableWallet_item.ItemDef, WalletCount_Item.ItemDef});
 
+            // equipment
+            QuestBattery.Init(_myBundle.LoadAsset<EquipmentDef>("QuestBattery"), stormincursionMain.instance.Config);
+
+            stormincursionContentPack.equipmentDefs.Add(new EquipmentDef[] { QuestBattery.EquipmentDef });
+
             // difficulty
             var serializableDifficulty = _myBundle.LoadAsset<SerializableDifficultyDef>("Storm_Difficulty");
             DifficultyAPI.AddDifficulty(serializableDifficulty);
+
+            // interactables
+            Dispenser.Init();
 
             // language
             R2API.LanguageAPI.Add("stormincursion_lang", System.IO.File.ReadAllText(System.IO.Path.Combine(System.IO.Path.GetDirectoryName(stormincursionMain.pluginInfo.Location),"stormincursion_lang.language")));

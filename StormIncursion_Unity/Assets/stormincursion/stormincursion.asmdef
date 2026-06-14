@@ -32,7 +32,10 @@
         "R2API.Language.dll",
         "R2API.Items.dll",
         "LookingGlass.dll",
-        "R2API.Difficulty.dll"
+        "R2API.Difficulty.dll",
+        "R2API.Director.dll",
+        "R2API.Prefab.dll",
+        "R2API.Core.dll"
     ],
     "autoReferenced": true,
     "defineConstraints": [],

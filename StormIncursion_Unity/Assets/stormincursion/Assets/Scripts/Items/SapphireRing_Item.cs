@@ -179,9 +179,9 @@ namespace stormincursion
                     ruleType = ItemDisplayRuleType.ParentedPrefab,
                     followerPrefab = DisplayPrefab,
                     childName = "HandR",
-                    localPos = new Vector3(-0.56493F, -0.77639F, 0.52119F),
-                    localAngles = new Vector3(286.0565F, 301.0045F, 354.6329F),
-                    localScale = new Vector3(4F, 4F, 4F)
+                    localPos = new Vector3(0.24578F, 0.57622F, 0.00829F),
+                    localAngles = new Vector3(339.3337F, 299.5092F, 7.12188F),
+                    localScale = new Vector3(3F, 3F, 3F)
                 }
             });
 
