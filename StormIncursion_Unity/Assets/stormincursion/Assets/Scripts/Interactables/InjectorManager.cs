@@ -2,14 +2,20 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.AddressableAssets;
 using RoR2;
+using System;
 
 namespace stormincursion
 {
-    public class DispenserManager : NetworkBehaviour
+    public class InjectorManager : NetworkBehaviour
     {
         public PurchaseInteraction purchaseInteraction;
         private GameObject _shrineUseEffect;
-        private int _batteriesLeft = 4; 
+        private int _batteriesLeftToInject = 2;
+        public int maxBatteries = 2;
+
+        public int BatteriesToInject => _batteriesLeftToInject;
+
+        public static event Action<InjectorManager> onProgressChanged;
 
         private void Start()
         {
@@ -31,15 +37,15 @@ namespace stormincursion
             CharacterBody body = context.activator?.GetComponent<CharacterBody>();
             if (body == null) return;
 
-            PickupIndex pickupIndex = PickupCatalog.FindPickupIndex(QuestBattery.EquipmentDef.equipmentIndex);
-
-            PickupDropletController.CreatePickupDroplet(
-                PickupCatalog.FindPickupIndex(QuestBattery.EquipmentDef.equipmentIndex),
-                transform.position + Vector3.up * 1.5f,
-                Vector3.up * 10f
-             );
-
-            _batteriesLeft--;
+            if (body.inventory.GetEquipmentIndex() == QuestBattery.EquipmentDef.equipmentIndex && _batteriesLeftToInject >= 1)
+            {
+                body.inventory.SetEquipmentIndex(EquipmentIndex.None, true);
+                _batteriesLeftToInject--;
+            }
+            else
+            {
+                return;
+            }
 
             EffectManager.SpawnEffect(_shrineUseEffect, new EffectData
             {
@@ -49,11 +55,13 @@ namespace stormincursion
                 color = Color.cyan
             }, true);
 
-            if (_batteriesLeft == 0)
+            onProgressChanged?.Invoke(this);
+
+            if (_batteriesLeftToInject == 0)
             {
                 purchaseInteraction.SetAvailable(false);
-            }
-            ;
+                StormLevel.ChangeStormLevel(-2);
+            };
         }
     }
 }

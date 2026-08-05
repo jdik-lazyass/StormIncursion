@@ -11,13 +11,15 @@ namespace stormincursion
     public class SapphireRing_Item
     {
         public static ItemDef ItemDef;
+        public static GameObject Effect;
         public static GameObject DisplayPrefab;
         public static ConfigEntry<float> HealMod;
 
-        public static void Init(ItemDef itemDef, ConfigFile config, GameObject displayPrefab)
+        public static void Init(ItemDef itemDef, ConfigFile config, GameObject displayPrefab, GameObject effect)
         {
             ItemDef = itemDef;
             DisplayPrefab = displayPrefab;
+            Effect = effect;
 
             HealMod = config.Bind<float>("Item: Sapphire Ring", "Heal mod Inc", 0.1f, "");
 
@@ -367,7 +369,7 @@ namespace stormincursion
             int hitCount = result.hitCount;
 
             EffectManager.SpawnEffect(
-                Addressables.LoadAssetAsync<GameObject>("RoR2/Base/Common/VFX/OmniExplosionVFX.prefab").WaitForCompletion(),
+                Effect,
                 new EffectData
                 {
                     origin = body.corePosition,
@@ -375,6 +377,8 @@ namespace stormincursion
                 },
                 true
             );
+
+            
 
             if (hitCount > 0)
             {
