@@ -16,11 +16,7 @@ namespace stormincursion
         {
             card = stormincursionContent._myBundle.LoadAsset<InteractableSpawnCard>("iscDispenser");
 
-            PurchaseInteraction purchaseInteraction = card.prefab.AddComponent<PurchaseInteraction>();
-            purchaseInteraction.contextToken = "DISPENSER_CONTEXT";
-            purchaseInteraction.NetworkdisplayNameToken = "DISPENSER_NAME";
-            purchaseInteraction.costType = CostTypeIndex.None;
-            purchaseInteraction.available = true;
+            PurchaseInteraction purchaseInteraction = card.prefab.GetComponent<PurchaseInteraction>();
 
             DispenserManager manager = card.prefab.GetComponent<DispenserManager>();
             manager.purchaseInteraction = purchaseInteraction;

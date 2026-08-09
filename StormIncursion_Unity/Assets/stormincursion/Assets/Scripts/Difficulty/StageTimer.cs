@@ -40,10 +40,6 @@ namespace stormincursion
 
         private static void Run_OnFixedUpdate(On.RoR2.Run.orig_OnFixedUpdate orig, Run self) // 50 times per second
         {
-            Chat.SendBroadcastChat(new Chat.SimpleChatMessage
-            {
-                baseToken = Convert.ToString(stageTimeCounted)
-            });
             orig(self);
             if (!BossDefeated && Run.instance != null && GivenBuffFromTimer == false)
             {
@@ -54,10 +50,6 @@ namespace stormincursion
             {
                 GivenBuffFromTimer = true;
                 stormincursionMain.logger.LogInfo("Given buff!");
-                Chat.SendBroadcastChat(new Chat.SimpleChatMessage
-                {
-                    baseToken = "buff given"
-                });
             }
         }
 
