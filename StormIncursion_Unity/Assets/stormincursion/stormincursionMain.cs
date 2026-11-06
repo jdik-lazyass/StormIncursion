@@ -10,9 +10,11 @@ namespace stormincursion
     #region Dependencies
     [BepInDependency("___riskofthunder.RoR2BepInExPack")]
     #endregion
+
     #region SoftDependencies
     [BepInDependency(LookingGlass.PluginInfo.PLUGIN_GUID, BepInDependency.DependencyFlags.SoftDependency)]
     #endregion
+
     [BepInPlugin(GUID, MODNAME, VERSION)]
     public class stormincursionMain : BaseUnityPlugin
     {

@@ -291,6 +291,20 @@ namespace stormincursion
                 }
             });
 
+            displayRules.Add("mdlEnforcer", new ItemDisplayRule[]
+            {
+                new ItemDisplayRule
+                {
+                    ruleType = ItemDisplayRuleType.ParentedPrefab,
+                    followerPrefab = DisplayPrefab,
+                    childName = "Head",
+                    localPos = new Vector3(0.0586F, 0.18243F, 0.08858F),
+                    localAngles = new Vector3(336.29F, 268.9775F, 152.042F),
+                    localScale = new Vector3(0.27104F, 0.26067F, 0.38021F)
+                }
+            });
+
+
             ItemAPI.Add(new CustomItem(ItemDef, displayRules));
         }
 
@@ -325,13 +339,9 @@ namespace stormincursion
             EntityStates.StunState stunState = hurtState.targetStateMachine?.state as EntityStates.StunState;
             if (stunState == null) return;
 
-            var durationField = typeof(EntityStates.StunState).GetField("duration", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
-            float duration = durationField != null ? (float)durationField.GetValue(stunState) : 1f;
+            float duration = 1f;
 
-            var fixedAgeField = typeof(EntityStates.EntityState).GetField("fixedAge", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
-            float fixedAge = fixedAgeField != null ? (float)fixedAgeField.GetValue(stunState) : 0f;
-
-            float remaining = duration - fixedAge;
+            float remaining = duration;
             if (remaining <= 0f) return;
 
             if (attackerBody.HasBuff(IcecreamCooldown_buff.BuffDef)) return;

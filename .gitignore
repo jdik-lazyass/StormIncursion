@@ -35,11 +35,6 @@ StormIncursion_Unity/Assets/ThunderKitSettings/Logs/*
 StormIncursion_Unity/Assets/ThunderKitSettings/ThunderKit Extensions.asset
 StormIncursion_Unity/ThunderKit/
 
-#Ensures mod dependencies such as R2API and others are not explicitly added to the github repository to avoid unecesary redistribution
-SS2-Project/Packages/*
-!SS2-Project/Packages/packages-lock.json
-!SS2-Project/Packages/manifest.json
-
 # Visual Studio 2015/2017 cache/options directory
 .vs/
 # Uncomment if you have tasks that create the project's static files in wwwroot
@@ -75,14 +70,12 @@ StyleCopReport.xml
 
 # specific folders
 StormIncursion_Unity/Library/
-StormIncursion_Unity/Packages/*/
 
 # Files built by Visual Studio
 *_i.c
 *_p.c
 *_i.h
 *.ilk
-*.meta
 *.obj
 *.iobj
 *.pch
@@ -203,15 +196,28 @@ PublishScripts/
 
 # NuGet Packages
 *.nupkg
-# The packages folder can be ignored because of Package Restore
-**/[Pp]ackages/*
-# except build/, which is used as an MSBuild target.
-!**/[Pp]ackages/build/
 # Uncomment if necessary however generally it will be regenerated when needed
 #!**/[Pp]ackages/repositories.config
 # NuGet v3's project.json files produces more ignorable files
 *.nuget.props
 *.nuget.targets
+
+# Unity
+StormIncursion_Unity/[Ll]ibrary/
+StormIncursion_Unity/[Ll]ogs/
+StormIncursion_Unity/[Tt]emp/
+StormIncursion_Unity/UserSettings/
+StormIncursion_Unity/logRunSetup.txt
+StormIncursion_Unity/Assets/stormincursion/Builds/
+
+# Пакеты: коммитим только список зависимостей
+StormIncursion_Unity/Packages/*
+!StormIncursion_Unity/Packages/manifest.json
+!StormIncursion_Unity/Packages/packages-lock.json
+
+# Wwise: кэши
+StormIncursion_Unity/StormIncursion_Unity_WwiseProject/.cache/
+StormIncursion_Unity/StormIncursion_Unity_WwiseProject/GeneratedSoundBanks/
 
 # Microsoft Azure Build Output
 csx/
@@ -315,7 +321,6 @@ paket-files/
 .idea/
 *.sln.iml
 *.sln
-*.asset
 
 # CodeRush
 .cr/

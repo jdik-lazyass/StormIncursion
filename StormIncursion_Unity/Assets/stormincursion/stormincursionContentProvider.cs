@@ -61,23 +61,11 @@ namespace stormincursion
             
             stormincursionContentPack.itemDefs.Add(new ItemDef[] { Keychain_Item.ItemDef, KeychainInvis_Item.ItemDef, IceCream_Item.ItemDef, SapphireRing_Item.ItemDef, MemorableWallet_item.ItemDef, WalletCount_Item.ItemDef});
 
-            // equipment
-            QuestBattery.Init(_myBundle.LoadAsset<EquipmentDef>("QuestBattery"), stormincursionMain.instance.Config);
-
-            stormincursionContentPack.equipmentDefs.Add(new EquipmentDef[] { QuestBattery.EquipmentDef });
-
             // difficulty
             var serializableDifficulty = _myBundle.LoadAsset<SerializableDifficultyDef>("Storm_Difficulty");
             DifficultyAPI.AddDifficulty(serializableDifficulty);
 
             StormDifficulty_Dif.Init(serializableDifficulty.DifficultyIndex);
-            StormLevel.Init(serializableDifficulty.DifficultyIndex);
-            StormStageController.Init();
-            StageTimer.Init();
-
-            // interactables
-            Dispenser.Init();
-            Injector.Init();
 
             // language
             R2API.LanguageAPI.Add("stormincursion_lang", System.IO.File.ReadAllText(System.IO.Path.Combine(System.IO.Path.GetDirectoryName(stormincursionMain.pluginInfo.Location),"stormincursion_lang.language")));
@@ -89,22 +77,6 @@ namespace stormincursion
                 RoR2Application.onLoad += Compat.LGCompat;
                 stormincursionMain.logger.LogInfo("Looking glass found, calling compatibility cs file.");
             }
-
-            #region rebalances
-            // items
-            AtGNerf.Init();
-            MissileAdj.Init();
-            FaradaySpursAdj.Init();
-
-            // director
-            CreditCostAdjustment.Init();
-
-            // characters
-            CommandoGrenadeBuff.Init();
-            CommandoFMJBuff.Init();
-
-            HuntressArrowRainBuff.Init();
-            #endregion
         }
         public IEnumerator GenerateContentPackAsync(GetContentPackAsyncArgs args)
         {

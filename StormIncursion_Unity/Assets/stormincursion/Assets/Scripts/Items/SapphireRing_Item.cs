@@ -291,6 +291,19 @@ namespace stormincursion
                 }
             });
 
+            displayRules.Add("mdlEnforcer", new ItemDisplayRule[]
+            {
+                new ItemDisplayRule
+                {
+                    ruleType = ItemDisplayRuleType.ParentedPrefab,
+                    followerPrefab = DisplayPrefab,
+                    childName = "ShieldFace",
+                    localPos = new Vector3(-0.02093F, 0.1011F, -0.01335F),
+                    localAngles = new Vector3(2.85218F, 293.2508F, 0.68938F),
+                    localScale = new Vector3(0.29989F, 0.29067F, 0.29582F)
+                }
+            });
+
             ItemAPI.Add(new CustomItem(ItemDef, displayRules));
         }
 

@@ -24,7 +24,7 @@
 
         "WALLET_NAME": "Memorable Wallet",
         "WALLET_PICKUP": "Saves money from purchases and gives it on the start of next stage.",
-        "WALLET_DESC": "Whenever you make a gold purchase, stores <style=cIsDamage>25%</style> <style=cStack>(+ 25% per stack, hyperbolic)</style> of spent gold. Upon entering next stage, gain all the stored gold back. Removes half of stored gold stacks upon entering next stage.",
+        "WALLET_DESC": "Whenever you buy a chest, stores <style=cIsDamage>25%</style> <style=cStack>(+ 25% per stack, hyperbolic)</style> of spent gold. Upon entering next stage, gain all the stored gold back. Removes half of stored gold stacks upon entering next stage.",
 
         "BATTERY_BROKE_MESSAGE": "<style=cDeath>Battery broke!</style>",
         "QUESTBATTERY_NAME": "Battery Cell",
